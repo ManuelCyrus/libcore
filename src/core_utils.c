@@ -1,4 +1,3 @@
-
 /*!
 *@brief function allow you to print character int std output
 */
@@ -18,4 +17,5 @@ void core_putstr(char *str){
     }
 }
 
-void co_
+
+
