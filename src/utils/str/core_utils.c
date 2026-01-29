@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 
 /*! 
 *@brief core_lenght return the all length of one string 
@@ -20,7 +22,7 @@ int core_length(char *str){
 
 
 /*! 
-*@brief core_str_join join 2 strings 
+*@brief core_str_join join 2 or more strings strings
 */   
 char *core_str_join(char *s1, char *s2){
 
@@ -54,9 +56,20 @@ char *core_str_join(char *s1, char *s2){
     new[i] = '\0';
     
     return new;
-
-    
 }
 
 
 
+int main(){
+
+
+char *s1 ="manuel fulamaa";
+char *s2 = "Hello worla";
+
+char *s = core_str_join(s1,s2);
+
+printf("%s",s);
+
+
+
+}
