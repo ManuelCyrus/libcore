@@ -1,6 +1,6 @@
 /* This only will include all utils function necessay to work with number*/
 
-#include "core_utils.h"
+#include "../include/core.h"
 
 /*!
 *@brief This function convert string to int 

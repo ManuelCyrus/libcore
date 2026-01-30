@@ -1,3 +1,4 @@
+#include "../include/core.h"
 /*!
 *@brief function allow you to print character int std output
 */
@@ -16,6 +17,4 @@ void core_putstr(char *str){
         core_putchar(str[i]);
     }
 }
-
-
 
