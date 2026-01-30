@@ -39,3 +39,23 @@ int core_strlen(char *str){
     }
     return (i);
 }
+
+/**
+ * @brief Returns a new string containing characters from the input string 
+ *        up to (but not including) the specified delimiter.
+ *
+ * @param str The input string to process.
+ * @param delim The delimiter character.
+ * @return A newly allocated string containing characters before the delimiter.
+ */
+char *core_firstworld(char *str,char delim){
+        
+    ssize_t len = core_strlen(str);
+    char *newworld = malloc((len+1)*(sizeof(char)));
+    for(int i = 0; str[i] != '\0' && str[i] != delim; i++){
+        newworld[i] = str[i];
+    }
+
+    newworld[len+1] = '\0';
+    return (newworld);
+}

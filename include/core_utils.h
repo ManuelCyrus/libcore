@@ -8,6 +8,7 @@ int core_atoi(char *str);
 // string
 void core_putchar(char c);
 void core_putstr(char *str);
+char *core_firstworld(char *str,char delim);
 
 
 
