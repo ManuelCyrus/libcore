@@ -2,12 +2,7 @@
 #define CORE_PRINT
 
 
-
-
-/*! 
-*@brief function to print data
-*/   
-void print(char arg,...);
+int print(const char * restrict format,...);
 
 
 #endif

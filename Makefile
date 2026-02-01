@@ -11,9 +11,11 @@ CC:=cc
 CFLAGS:= -Wall -Wextra -Werror
 
 SRC_DIR:= src/
-SRC_PRINT:= src/utils
+SRC_UTILS:= src/utils/
+SRC_PRINT:= src/print/
 
-SRC:=$(wildcard $(SRC_DIR)*.c $(SRC_PRINT)*.C)
+
+SRC:=$(wildcard $(SRC_DIR)*.c $(SRC_UTILS)*.c $(SRC_PRINT)*.c)
 OBJ:=$(SRC:.c=.o)
 
 all:$(NAME) BANNER
