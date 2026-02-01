@@ -35,7 +35,7 @@ BANNER:
 
 fclean:
 	clear
-	rm -f $(OBJ)
+	rm -f $(OBJ) libcore.a
 re:fclean all
 
 .PHONY: all clean fclean re	BANNER
