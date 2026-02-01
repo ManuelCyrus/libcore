@@ -25,6 +25,9 @@ int print(const char * restrict format, ...)
             if(format[i]=='c'){
                 core_putchar(va_arg(arg,int));
             }
+            else if(format[i]== 's'){
+                core_putstr(va_arg(arg,char *));
+            }
         }
         else{
              
