@@ -28,6 +28,9 @@ int print(const char * restrict format, ...)
             else if(format[i]== 's'){
                 core_putstr(va_arg(arg,char *));
             }
+            else if(format[i] == 'd' || format[i] == 'i'){
+                core_putnbr(va_arg(arg,int));
+            }
         }
         else{
              

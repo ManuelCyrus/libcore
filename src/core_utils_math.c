@@ -1,5 +1,4 @@
 /* This only will include all utils function necessay to work with number*/
-
 #include "../include/core.h"
 
 /*!
