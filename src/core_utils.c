@@ -59,3 +59,4 @@ char *core_firstworld(char *str,char delim){
     newworld[len+1] = '\0';
     return (newworld);
 }
+

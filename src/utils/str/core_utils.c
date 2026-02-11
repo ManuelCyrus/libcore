@@ -4,7 +4,7 @@
 /*! 
 *@brief core_lenght return the all length of one string 
 */  
-int core_length(char *str){
+int core_strlen(char *str){
 
     int i = 0;
 

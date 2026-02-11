@@ -1,6 +1,27 @@
 /* This only will include all utils function necessay to work with number*/
 #include "../include/core.h"
 
+
+/*!
+*@brief This function print number in std output
+*/
+void core_putnbr(int number){
+
+    if( number < 0){
+        core_putchar('-');
+    }
+
+    if(number >= 10){
+        core_putnbr(number/10);
+    }
+    
+    core_putchar((number%10)+'0');
+}
+
+
+// ascci to int
+
+
 /*!
 *@brief This function convert string to int 
 */
@@ -30,19 +51,35 @@ int core_atoi(char *str){
 }
 
 
-/*!
-*@brief This function print number in std output
-*/
-void core_putnbr(int number){
+/**
+*@brief This function convert int to ascii
+**/
+char *core_itoa(int n){
 
-    if( number < 0){
-        core_putchar('-');
-    }
 
-    if(number >= 10){
-        core_putnbr(number/10);
-    }
-    
-    core_putchar((number%10)+'0');
 }
 
+/** 
+ * @brief This function count the length of the numbers in decimal base
+ **/
+
+ int core_number_length(int nbr){
+
+    int i = 0;
+    if(nbr == 0){
+        return (0);
+    }
+    else if(nbr < 0){
+        nbr = -nbr;
+    }
+
+    while(nbr>=10){
+    
+        nbr/=nbr;
+        i++;
+    }
+
+    return (i);
+
+
+ }
