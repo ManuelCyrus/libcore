@@ -51,29 +51,22 @@ int core_atoi(char *str){
 }
 
 
-/**
-*@brief This function convert int to ascii
-**/
-char *core_itoa(int n){
-
-
-}
 
 /** 
  * @brief This function count the length of the numbers in decimal base
  **/
-
  int core_number_length(int nbr){
 
     int i = 0;
     if(nbr == 0){
-        return (0);
+        return (1);
     }
     else if(nbr < 0){
-        nbr = -nbr;
+        nbr = - nbr;
+        i++;
     }
 
-    while(nbr>=10){
+    while(nbr >=10 ){
     
         nbr/=nbr;
         i++;
@@ -83,3 +76,37 @@ char *core_itoa(int n){
 
 
  }
+
+/**
+*@brief This function convert int to ascii
+**/
+char *core_itoa(int nbr){
+
+    int len = core_number_length(nbr);
+    int i = 0;
+    char *str = malloc((len+1)*sizeof(char *));
+
+    if(nbr < 0){
+        str[i] = '-';
+        nbr = -nbr;
+        i++;
+    }
+
+    if(nbr >= 10){
+        core_itoa(nbr/10);
+        
+    }
+
+    while (nbr >=10 )
+    {
+        str[i] = nbr % 10 + '0';
+        nbr/=10;
+        i++;
+    }
+    
+    str[i] = '\0';
+
+    return (str);
+
+
+}
