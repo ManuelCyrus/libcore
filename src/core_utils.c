@@ -60,3 +60,26 @@ char *core_firstworld(char *str,char delim){
     return (newworld);
 }
 
+/**
+ * @brief Returns a the position of one delim that we want to search in a string
+ *     
+ *
+ * @param str The input string to process.
+ * @param delim The delimiter character.
+ * @return A newly allocated string containing characters before the delimiter.
+ */
+int core_search_delim(char *str, char delim){
+
+    int i = 0;
+    while (str[i])
+    {
+        if(str[i] == delim){
+            return(i);
+        }
+
+        i++;
+    }
+
+    return (-1);
+
+}

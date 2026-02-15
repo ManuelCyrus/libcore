@@ -9,7 +9,9 @@ void core_putnbr(int number){
 
     if( number < 0){
         core_putchar('-');
+        number = -number;
     }
+
 
     if(number >= 10){
         core_putnbr(number/10);
@@ -109,4 +111,27 @@ char *core_itoa(int nbr){
     return (str);
 
 
+}
+
+
+
+/**
+*@brief This function check if the number is prime
+**/
+
+int core_is_prime(int nbr){
+
+    int factor = 2;
+
+    while(nbr > factor ){
+
+        if(nbr % factor == 0 ){
+            return(0);
+        }
+
+        factor++;
+
+    }
+
+    return (1);
 }
