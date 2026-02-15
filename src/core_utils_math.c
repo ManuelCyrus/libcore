@@ -148,17 +148,20 @@ int core_is_prime(int nbr){
  * */
 int core_pow(int base, int expo){
 
-    int i = 0;
+    int i = 1;
+    int b = base;
 
-    while (i<= expo)
+    while (i < expo)
     {
-        base*=expo;
+        base = base*b;
         i++;
     }
     
     return (base);
 
 }
+
+
 
 
 /**
