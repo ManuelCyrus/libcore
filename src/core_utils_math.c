@@ -21,7 +21,12 @@ void core_putnbr(int number){
 }
 
 
-// ascci to int
+/**
+*@brief Check if  is number
+*/
+int core_is_digit(char c){
+    return( (c >= '0' && c<='9') || (c >= 0 && c <= 9));
+}
 
 
 /*!
@@ -118,7 +123,6 @@ char *core_itoa(int nbr){
 /**
 *@brief This function check if the number is prime
 **/
-
 int core_is_prime(int nbr){
 
     int factor = 2;
@@ -134,4 +138,38 @@ int core_is_prime(int nbr){
     }
 
     return (1);
+}
+
+
+//exponentiation
+
+/**
+ * @brief Calculate the base raised to the exponent
+ * */
+int core_pow(int base, int expo){
+
+    int i = 0;
+
+    while (i<= expo)
+    {
+        base*=expo;
+        i++;
+    }
+    
+    return (base);
+
+}
+
+
+/**
+ * @brief return the absolute value of the  x
+ * */
+int  core_abs(int x){
+    
+
+    if(x < 0){
+        x = -x;
+    }
+
+    return(x);
 }

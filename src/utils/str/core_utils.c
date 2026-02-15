@@ -22,6 +22,17 @@ int core_strlen(char *str){
 
 
 /*! 
+*@brief check if the character is alphabet
+*/ 
+int core_is_alphabet(char c){
+
+    return((c>='a' && c<='z') || (c>='A' && c<='Z') );
+
+}
+
+
+
+/*! 
 *@brief core_str_join join 2 or more strings strings
 */   
 char *core_str_join(char *s1, char *s2){
@@ -60,16 +71,3 @@ char *core_str_join(char *s1, char *s2){
 
 
 
-int main(){
-
-
-char *s1 ="manuel fulamaa";
-char *s2 = "Hello worla";
-
-char *s = core_str_join(s1,s2);
-
-printf("%s",s);
-
-
-
-}
