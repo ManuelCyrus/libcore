@@ -5,6 +5,7 @@
 int core_atoi(char *str);
 char *core_itoa(int nbr);
 void core_putnbr(int nbr);
+void core_putfloat(double nbr);
 int core_is_prime(int nbr);
 int core_is_digit(char c);
 

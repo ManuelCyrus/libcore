@@ -31,6 +31,9 @@ int print(const char * restrict format, ...)
             else if(format[i] == 'd' || format[i] == 'i'){
                 core_putnbr(va_arg(arg,int));
             }
+            else if(format[i] == 'f'){
+                core_putfloat(va_arg(arg,double));
+            }
         }
         else{
              

@@ -11,14 +11,48 @@ void core_putnbr(int number){
         core_putchar('-');
         number = -number;
     }
-
-
     if(number >= 10){
         core_putnbr(number/10);
     }
-    
     core_putchar((number%10)+'0');
 }
+
+
+
+
+
+/**
+ * @brief This function print float in std output
+ * * */
+void core_putfloat(double nbr){
+
+    int i = 0;
+    core_putnbr((int)(nbr));
+    
+    double newnbr= nbr - (int)(nbr);
+
+    write(1,".",1);
+
+    while (i<=5)
+    {     
+
+         newnbr = newnbr -(int)newnbr;
+         newnbr *= 10;
+        
+         int value = (int)(newnbr);
+
+        core_putnbr(value);
+
+        i++;
+    }
+    
+
+    
+    
+
+
+ }
+
 
 
 /**
@@ -176,3 +210,13 @@ int  core_abs(int x){
 
     return(x);
 }
+
+/**
+ * @brief return the square of the number 
+ */
+/* int core_sqrt(int x){
+
+}
+
+*/
+
