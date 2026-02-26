@@ -1,5 +1,6 @@
 #include "../../include/core.h"
 
+
 /*!
  * @brief Prints a formatted message to the standard output.
  *
@@ -34,10 +35,30 @@ int print(const char * restrict format, ...)
             else if(format[i] == 'f'){
                 core_putfloat(va_arg(arg,double));
             }
-        }
-        else{
-             
-        core_putchar(format[i]);
+            else if(format[i] == '.'){
+        
+                if(format[i+1] >= '0' && format[i+1] <= '9')
+                {   i++;
+                    i++;
+                    while(format[i] != '\0' && format[i] >= '0' && format[i]<='9')i++;
+                    if(format[i] == 'f'){
+                        core_putfloat(va_arg(arg,double),6);
+                    }
+                    else{
+                    i--;
+                    i--;
+                        core_putchar(format[i]);
+                    }
+                }
+                    
+                     
+            }
+            else{
+
+            core_putchar(format[i]);
+            }
+
+
         }
 
         i++;

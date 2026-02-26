@@ -1,6 +1,12 @@
 /* This only will include all utils function necessay to work with number*/
 #include "../include/core.h"
 
+/**
+ * @brief Macro to allow printing with a default precision of 2 
+ * if only one argument is provided.
+ */
+
+
 
 /*!
 *@brief This function print number in std output
@@ -24,16 +30,28 @@ void core_putnbr(int number){
 /**
  * @brief This function print float in std output
  * * */
-void core_putfloat(double nbr){
+void core_putfloat(double nbr, ...){
 
+    va_list arg;
+
+    va_start(arg,nbr);
+
+    int value = va_arg(arg,int) ;
+    int count = value ? value: 5;
+
+     
     int i = 0;
     core_putnbr((int)(nbr));
+
+    if(nbr < 0){
+        nbr = - nbr;
+    }
     
     double newnbr= nbr - (int)(nbr);
 
     write(1,".",1);
 
-    while (i<=5)
+    while (i <= count)
     {     
 
          newnbr = newnbr -(int)newnbr;
@@ -48,9 +66,8 @@ void core_putfloat(double nbr){
     
 
     
+    va_end(arg);
     
-
-
  }
 
 
@@ -199,8 +216,11 @@ int core_pow(int base, int expo){
 
 
 /**
- * @brief return the absolute value of the  x
- * */
+ * @brief Returns the absolute value of the integer x.
+ * 
+ * @param x The integer to check.
+ * @return The positive magnitude of x.
+ */
 int  core_abs(int x){
     
 
@@ -210,6 +230,42 @@ int  core_abs(int x){
 
     return(x);
 }
+
+/**
+ * @brief Returns the absolute value of a floating-point number.
+ * 
+ * @param x The float value to process.
+ * @return float The non-negative magnitude of x.
+ */
+float  core_fabs(int x){
+    
+
+    if(x < 0){
+        x = -x;
+    }
+
+    return(x);
+}
+
+/**
+ * @brief Returns the floating-point remainder of a / b.
+ * 
+ * @param a The numerator (dividend).
+ * @param b The denominator (divisor).
+ * @return float The remainder of the division.
+ */
+double  core_fmod(int a,int b){
+    
+    int singnal = 1;
+
+    if(a < 0){
+        singnal = -singnal;
+    }
+    a = a % b; 
+
+    return(a * singnal);
+}
+
 
 /**
  * @brief return the square of the number 

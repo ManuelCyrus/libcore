@@ -5,7 +5,7 @@
 int core_atoi(char *str);
 char *core_itoa(int nbr);
 void core_putnbr(int nbr);
-void core_putfloat(double nbr);
+void core_putfloat(double nbr,...);
 int core_is_prime(int nbr);
 int core_is_digit(char c);
 
@@ -13,6 +13,9 @@ int core_is_digit(char c);
 
 int core_pow(int base, int expo);
 int  core_abs(int x);
+float core_fabs(int x);
+double core_fmod(int a,int b);
+
 
 
 
