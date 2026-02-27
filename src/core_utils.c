@@ -83,3 +83,42 @@ int core_search_delim(char *str, char delim){
     return (-1);
 
 }
+
+
+/**
+ * @brief Converts a number to hexadecimal and returns a new pointer
+ * 
+ * @param nbr The unsigned integer to be converted
+ * @param c If 'X' is Caps, if 'x' is lower
+ * @return char* A pointer to the allocated string containing the hex value
+ */
+char *core_str_hex(unsigned int nbr,char c){
+
+    int len =  core_number_length(nbr);
+    int i = 0;
+    char *str = malloc((len + 1 )* sizeof(char *));
+    char *hex_low = "0123456789abcdef";
+    char *hex_cap = "0123456789ABCDEF";
+    
+    if(nbr > 16){
+        core_str_hex(nbr/16,c);
+    }
+    
+    while (nbr!= 0)
+    {
+
+       if( c =='X'){
+         str[i] = hex_cap[nbr%16];
+       }
+       else{
+         str[i] = hex_low[nbr%16];
+       }
+        nbr/=16;
+        i++;
+    }
+    
+str[i] = '\0';
+
+return (str);
+
+}

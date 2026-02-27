@@ -11,7 +11,7 @@
 - Thread-safe operations
 - Extensible modules for future development
 
-> ⚠️ Currently in early development. Still learning, but aiming to evolve into a full-fledged C framework.
+>  Currently in early development. Still learning, but aiming to evolve into a full-fledged C framework.
 
 ---
 

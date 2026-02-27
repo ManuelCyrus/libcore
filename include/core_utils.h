@@ -8,6 +8,7 @@ void core_putnbr(int nbr);
 void core_putfloat(double nbr,...);
 int core_is_prime(int nbr);
 int core_is_digit(char c);
+int core_number_length(int nbr);
 
 //exponetiontion
 
@@ -25,6 +26,9 @@ void core_putstr(char *str);
 char *core_firstworld(char *str,char delim);
 int core_search_delim(char *str, char delim);
 int core_is_alphabet(char c);
+
+//
+char *core_str_hex(unsigned int nbr,char c);
 
 
 

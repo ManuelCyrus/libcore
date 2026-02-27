@@ -53,6 +53,9 @@ int print(const char * restrict format, ...)
                     
                      
             }
+            else if(format[i] == '%'){
+                core_putchar('%');
+            }
             else{
 
             core_putchar(format[i]);

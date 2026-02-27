@@ -110,9 +110,12 @@ int core_atoi(char *str){
 
 
 
-/** 
- * @brief This function count the length of the numbers in decimal base
- **/
+/**
+ * @brief This function counts the length of the numbers in decimal base
+ * 
+ * @param n The integer to be measured
+ * @return int The number of digits
+ */
  int core_number_length(int nbr){
 
     int i = 0;
