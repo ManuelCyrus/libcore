@@ -1,6 +1,7 @@
 #ALL COLORS
 GREEN := \033[0;32m
 RESET := \033[0m
+RED := \033[0;31m
 
 
 
@@ -38,6 +39,17 @@ BANNER:
 fclean:
 	clear
 	rm -f $(OBJ) libcore.a
+	clear
 re:fclean all
+
+Tester:
+	cc $(CFLAGS) main.c  libcore.a -o test
+	clear
+	@echo "$(GREEN)=============== MOD TEST ACTIVETED ==================\n"
+	./test
+test:Tester
+
+leaks:
+	valgrind ./test
 
 .PHONY: all clean fclean re	BANNER
