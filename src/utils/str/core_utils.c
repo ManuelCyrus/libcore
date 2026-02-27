@@ -79,8 +79,8 @@ int core_strlen_ignore(char *str,char c){
     while(*str != '\0'){
 
         while (*str != '\0' && *str == c) *str++;
-        if (*str )
-        
+        if (*str ) i++;
+        while( *str != '\0' && *str != c) *str++;
     }
 }
 /**
