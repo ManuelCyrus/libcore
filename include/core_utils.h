@@ -9,7 +9,7 @@ void core_putfloat(double nbr,...);
 int core_is_prime(int nbr);
 int core_is_digit(char c);
 int core_number_length(int nbr);
-
+void core_putnbr_unsigned(unsigned int number);
 //exponetiontion
 
 int core_pow(int base, int expo);

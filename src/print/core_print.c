@@ -52,7 +52,17 @@ int print(const char * restrict format, ...)
                 }
                     
                      
+            }else if(format[i] == 'u'){
+                core_putnbr_unsigned(va_arg(arg,unsigned int));
             }
+            else if(format[i] == 'x' || format[i] == 'X'){
+                if(format[i]=='x')
+                    core_putstr(core_str_hex(va_arg(arg,int),'x'));
+                else
+                    core_putstr(core_str_hex(va_arg(arg,int),'X'));
+
+            }
+
             else if(format[i] == '%'){
                 core_putchar('%');
             }

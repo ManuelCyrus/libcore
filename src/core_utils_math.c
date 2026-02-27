@@ -8,9 +8,11 @@
 
 
 
-/*!
-*@brief This function print number in std output
-*/
+/*
+ * @brief This function prints a number in the standard output
+ * 
+ * @param number The integer to be printed
+ */
 void core_putnbr(int number){
 
     if( number < 0){
@@ -21,6 +23,19 @@ void core_putnbr(int number){
         core_putnbr(number/10);
     }
     core_putchar((number%10)+'0');
+}
+
+/*
+ * @brief This function prints a number in the standard output
+ * 
+ * @param number The integer to be printed
+ */
+void core_putnbr_unsigned(unsigned int number){
+
+    if(number >= 10)
+        core_putnbr_unsigned(number/10);
+    core_putchar(number % 10 + '0');
+   
 }
 
 
