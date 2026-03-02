@@ -51,6 +51,8 @@ re: fclean
 	@printf "\n$(YELLOW)Starting rebuild...\n$(RESET)"
 	@$(MAKE) --no-print-directory all
 	@printf "$(GREEN)Rebuild successfully completed!\n$(RESET)"
+	@echo "for help run make help"
+
 
 
 Tester:
@@ -61,7 +63,16 @@ Tester:
 	@printf "\n=============== FINAL TEST FILE =====================\n"
 test:Tester
 
+help:
+	clear
+	@printf "${YELLOW}WELCOME TO LIBCORE GUIDE${RESET}"
+
+	@printf "${YELLOW}WELCOME TO LIBCORE GUIDE${RESET}"
+
+
 leaks:
 	valgrind ./test
+	@echo "for help run make help"
+
 
 .PHONY: all clean fclean re	BANNER

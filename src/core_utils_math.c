@@ -213,12 +213,22 @@ int core_is_prime(int nbr){
 //exponentiation
 
 /**
- * @brief Calculate the base raised to the exponent
- * */
+ * @brief Computes the power of an integer (base^exponent).
+ * * @param base The number to be multiplied.
+ * @param expo The power to raise the base to (must be non-negative).
+ * @return int The result of base raised to the power of expo. 
+ * Returns 1 if expo is 0. Returns 0 if expo is negative.
+ * * @note This function performs integer exponentiation. Be cautious of 
+ * integer overflow for large bases or exponents.
+ */
 int core_pow(int base, int expo){
 
     int i = 1;
     int b = base;
+
+
+    if(expo == 0 || expo < 0)
+        return (0);
 
     while (i < expo)
     {
