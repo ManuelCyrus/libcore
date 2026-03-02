@@ -54,7 +54,7 @@ re: fclean
 
 
 Tester:
-	cc $(CFLAGS) main.c  libcore.a -o test
+	cc $(CFLAGS) ./tests/main.c  libcore.a -o test
 	clear
 	@printf "$(GREEN)=============== MOD TEST ACTIVETED ==================\n"
 	./test
