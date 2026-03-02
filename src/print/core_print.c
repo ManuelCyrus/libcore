@@ -52,7 +52,10 @@ int print(const char * restrict format, ...)
                 }
                     
                      
-            }else if(format[i] == 'u'){
+            }else if(format[i] == 'o'){
+                core_putnbr(core_nbr_octal(va_arg(arg,long)));
+            }
+            else if(format[i] == 'u'){
                 core_putnbr_unsigned(va_arg(arg,unsigned int));
             }
             else if(format[i] == 'x' || format[i] == 'X'){

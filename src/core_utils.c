@@ -122,3 +122,28 @@ str[i] = '\0';
 return (str);
 
 }
+
+/**
+ * @brief Converts an unsigned integer to its octal (base-8) representation.
+ * * @param nbr The unsigned integer to be converted.
+ * @return long The octal representation of the number as a "pseudo-decimal" long.
+ * * @note Warning: Using a long to store octal digits can cause overflow 
+ * if the input 'nbr' is very large, as the base-10 representation 
+ * grows much faster than the actual value.
+ */
+long core_nbr_octal(unsigned int nbr){
+
+    long new = 0;
+if(nbr>8){
+   new = core_nbr_octal(nbr/8);
+}
+
+new = (new * 10) + (nbr % 8);
+
+
+return (new);
+
+
+
+
+}

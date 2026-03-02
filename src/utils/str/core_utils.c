@@ -101,13 +101,4 @@ int core_strlen_ignore(char *str,char c){
 
  }
 
- 
- /**
- * @brief 
- */
- char **core_trim(char *str,char c){
-
-
- }
-
 

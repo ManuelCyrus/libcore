@@ -29,6 +29,7 @@ int core_is_alphabet(char c);
 
 //
 char *core_str_hex(unsigned int nbr,char c);
+long core_nbr_octal(unsigned int nbr);
 
 
 
