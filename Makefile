@@ -16,9 +16,11 @@ CFLAGS:= -Wall -Wextra -Werror
 SRC_DIR:= src/
 SRC_UTILS:= src/utils/
 SRC_PRINT:= src/print/
+SRC_STR:= src/utils/str/
 
 
-SRC:=$(wildcard $(SRC_DIR)*.c $(SRC_UTILS)*.c $(SRC_PRINT)*.c)
+
+SRC:=$(wildcard $(SRC_DIR)*.c $(SRC_UTILS)*.c $(SRC_PRINT)*.c $(SRC_STR)*.c)
 OBJ:=$(SRC:.c=.o)
 
 all:$(NAME) BANNER
@@ -39,11 +41,11 @@ BANNER:
 
 fclean:
 	@printf "$(RED) Removing files.....\n"
-	rm -f $(OBJ) libcore.a
+	rm -f $(OBJ) libcore.a test gdb_output_error.txt
 	@printf "$(RED) All files have been removed\n$(RESET)"
 
 clean:
-	rm -f $(OBJ) libcore.a
+	rm -f $(OBJ) libcore.a gdb_output_error.txt
 	clear
 	@printf "$(RED)All files  deleted now\n"
 
@@ -73,6 +75,10 @@ help:
 leaks:
 	valgrind ./test
 	@echo "for help run make help"
+
+verify:
+	chmod +x ./find_error.sh
+	sh ./find_error.sh
 
 
 .PHONY: all clean fclean re	BANNER

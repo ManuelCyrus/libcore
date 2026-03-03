@@ -47,11 +47,11 @@ char *core_str_join(char *s1, char *s2){
         return s2;
     }
 
-    int strlen = core_length(s1)+core_length(s2);
-    char *new = malloc((strlen+1)*sizeof(char));
+    int len = core_strlen(s1)+core_strlen(s2);
+    char *new = malloc((len+1)*sizeof(char));
 
     if(!new)
-        return;
+        return ("");
     int i = 0;
     int j =0;
     while (s1[i] != '\0')
@@ -72,7 +72,7 @@ char *core_str_join(char *s1, char *s2){
     return new;
 }
 
-
+/*
 int core_strlen_ignore(char *str,char c){
 
     int i = 0;
@@ -83,22 +83,26 @@ int core_strlen_ignore(char *str,char c){
         while( *str != '\0' && *str != c) *str++;
     }
 }
+    */
 /**
  * @brief 
  */
+/*
  char **core_split(char *str,char c){
 
 
 
  }
-
+*/
 
  /**
  * @brief 
  */
- char **core_trim(char *str,char c){
+/* char **core_trim(char *str,char c){
 
 
  }
+*/
+
 
 

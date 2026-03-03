@@ -27,19 +27,6 @@ void core_putstr(char *str){
     }
 }
 
-/*!
-*@brief This function return the lengh of 
-*the string
-*/
-int core_strlen(char *str){
-
-    int i = 0;
-    while(str[i] != '\0'){
-        i++;
-    }
-    return (i);
-}
-
 /**
  * @brief Returns a new string containing characters from the input string 
  *        up to (but not including) the specified delimiter.
