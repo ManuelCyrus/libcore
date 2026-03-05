@@ -2,7 +2,7 @@
 
 
 
-**Licore** is a C framework, starting as an alternative to `libc`, focused on providing:
+**Libcore** is a C framework, starting as an alternative to `libc`, focused on providing:
 
 - Custom memory allocator
 - printf and IO utilities

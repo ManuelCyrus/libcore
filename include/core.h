@@ -10,6 +10,8 @@
 #include "core_print.h"
 #include "core_utils.h"
 #include "core_print.h"
+#include "core_files.h"
+#include "core_str.h"
 
 
 

@@ -20,14 +20,6 @@ double core_fmod(int a,int b);
 
 
 
-// string
-void core_putchar(char c);
-void core_putstr(char *str);
-char *core_firstworld(char *str,char delim);
-int core_search_delim(char *str, char delim);
-int core_is_alphabet(char c);
-char *core_str_join(char *s1, char *s2);
-int core_strlen(char *str);
 
 //
 char *core_str_hex(unsigned int nbr,char c);
