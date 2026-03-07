@@ -4,7 +4,7 @@
 /*! 
 *@brief core_lenght return the all length of one string 
 */  
-int core_strlen(char *str){
+int core_strlen(const char *str){
 
     int i = 0;
 
@@ -179,12 +179,12 @@ void *core_memcpy(void *dest, const void *src, size_t n){
  */
 size_t core_strlcpy(char *dest, const char *src, size_t size){
 
-    int src_len = core_strlen(src);
+    size_t src_len = core_strlen(src);
     if(size == 0)
         return src_len;
 
     int i = 0 ;
-    while (src[i] !='\0' && i< (size-1))
+    while (src[i] !='\0' && i < (size-1))
     {
         dest[i] = src[i];
         i++;
