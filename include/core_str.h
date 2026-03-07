@@ -25,9 +25,9 @@ void *core_memcpy(void *dest, const void *src, size_t n);
 void *core_memmove(void *dest, const void *src, size_t n);
 size_t core_strlcpy(char *dest, const char *src, size_t size);
 size_t core_strlcat(char *dest, const char *src, size_t size);
-int tolower(int c);
-int toupper(int c);
-char *strchr(const char *s, int c);
+int core_tolower(int c);
+int core_toupper(int c);
+char *core_strchr(const char *s, int c);
 
 
 

@@ -245,7 +245,7 @@ size_t core_strlcat(char *dest, const char *src, size_t size){
  * @return The uppercase equivalent, or the original character if no 
  *         conversion was possible.
  */
-int toupper(int c){
+int core_toupper(int c){
     if(c>='a' && c<='z')
         return (c-32);
     else
@@ -262,7 +262,7 @@ int toupper(int c){
  * @return The lowercase equivalent, or the original character if no 
  *         conversion was possible.
  */
-int tolower(int c){
+int core_tolower(int c){
      if(c>='A' && c<='Z')
         return (c+32);
     else
@@ -281,7 +281,7 @@ int tolower(int c){
  * @param c The character to be located (passed as an int).
  * @return A pointer to the located character, or NULL if not found.
  */
-char *strchr(const char *s, int c){
+char *core_strchr(const char *s, int c){
 
     int i = 0;
 
