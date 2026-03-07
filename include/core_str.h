@@ -21,6 +21,13 @@ int core_isascii(char c);
 int core_isprint(char c);
 void *core_memset(void *s, int c, size_t n);
 void core_bzero(void *s, size_t n);
+void *core_memcpy(void *dest, const void *src, size_t n);
+void *core_memmove(void *dest, const void *src, size_t n);
+size_t core_strlcpy(char *dest, const char *src, size_t size);
+size_t core_strlcat(char *dest, const char *src, size_t size);
+int tolower(int c);
+int toupper(int c);
+char *strchr(const char *s, int c);
 
 
 
