@@ -183,7 +183,7 @@ size_t core_strlcpy(char *dest, const char *src, size_t size){
     if(size == 0)
         return src_len;
 
-    int i = 0 ;
+    size_t i = 0 ;
     while (src[i] !='\0' && i < (size-1))
     {
         dest[i] = src[i];
@@ -211,8 +211,8 @@ size_t core_strlcpy(char *dest, const char *src, size_t size){
  */
 size_t core_strlcat(char *dest, const char *src, size_t size){
 
-    int src_len = core_strlen(src);
-    int dest_len =  core_strlen(dest)-1;
+    size_t src_len = core_strlen(src);
+    size_t dest_len =  core_strlen(dest)-1;
     size_t i = 0;
 
 
