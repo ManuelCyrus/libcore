@@ -18,7 +18,6 @@ int print(const char * restrict format, ...)
     int i = 0;
    va_start(arg,format);
 
-
    while(format[i] != '\0'){
 
         if(format[i] == '%'){
@@ -75,6 +74,9 @@ int print(const char * restrict format, ...)
             }
 
 
+        }
+        else{
+            core_putchar(format[i]);
         }
 
         i++;
