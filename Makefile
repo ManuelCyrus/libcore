@@ -17,10 +17,12 @@ SRC_DIR:= src/
 SRC_UTILS:= src/utils/
 SRC_PRINT:= src/print/
 SRC_STR:= src/utils/str/
+SRC_FILES:= src/files/
 
 
 
-SRC:=$(wildcard $(SRC_DIR)*.c $(SRC_UTILS)*.c $(SRC_PRINT)*.c $(SRC_STR)*.c)
+
+SRC:=$(wildcard $(SRC_DIR)*.c $(SRC_UTILS)*.c $(SRC_PRINT)*.c $(SRC_STR)*.c $(SRC_FILES)*.c)
 OBJ:=$(SRC:.c=.o)
 
 all:$(NAME) BANNER

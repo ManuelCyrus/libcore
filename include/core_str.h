@@ -28,6 +28,7 @@ size_t core_strlcat(char *dest, const char *src, size_t size);
 int core_tolower(int c);
 int core_toupper(int c);
 char *core_strchr(const char *s, int c);
+char *core_strdup(char *str);
 
 
 

@@ -297,3 +297,29 @@ char *core_strchr(const char *s, int c){
     return (NULL);
 }
 
+
+/**
+ * @brief Duplicates a string by allocating memory dynamically.
+ * 
+ * This function calculates the length of the string 'str', allocates 
+ * sufficient memory using malloc(), and copies the content including 
+ * the terminating null byte.
+ * 
+ * @param str The null-terminated string to duplicate.
+ * @return A pointer to the newly allocated string, or NULL if allocation fails.
+ */
+char *core_strdup(char *str) {
+    int len = core_strlen(str);
+    char *new = malloc(len + 1);
+
+    if (!new) return NULL;
+
+    int i = 0;
+    while (str[i] != '\0') {
+        new[i] = str[i];
+        i++;
+    }
+    
+    new[i] = '\0';
+    return new;
+}
