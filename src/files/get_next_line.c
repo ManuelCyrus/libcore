@@ -45,7 +45,6 @@ static char *get_line(char *str) {
     while (str[i] && str[i] != '\n')
         i++;
 
-    // Aloca i + (1 se tiver \n) + 1 para o \0
     int has_nl = (str[i] == '\n');
     char *new = malloc(i + has_nl + 1);
     if (!new) return NULL;
@@ -73,7 +72,17 @@ static char *save_remaining(char *str) {
     return core_strdup(str + i + 1);
 }
 
-
+/**
+ * @brief Reads a single line from a given file descriptor.
+ * 
+ * This function reads from 'fd' until a newline character ('\n') or 
+ * the end of file (EOF) is reached. It uses a static variable to 
+ * preserve the remaining buffer content across successive calls.
+ * 
+ * @param fd The file descriptor to read from.
+ * @return A pointer to the string containing the line (including the '\n'), 
+ *         or NULL if the end of file is reached or an error occurs.
+ */
 char *get_next_line(int fd) {
     static char *content = NULL; 
     char *line;
@@ -100,3 +109,4 @@ char *get_next_line(int fd) {
 
     return (line);
 }
+
