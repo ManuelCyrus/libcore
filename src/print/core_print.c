@@ -64,6 +64,9 @@ int print(const char * restrict format, ...)
                     core_putstr(core_str_hex(va_arg(arg,int),'X'));
 
             }
+            else if(format[i] == 'F'){
+                readlines(va_arg(arg, int));
+            }
 
             else if(format[i] == '%'){
                 core_putchar('%');
